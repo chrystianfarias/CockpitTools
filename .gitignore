@@ -1,0 +1,4 @@
+# release assets are uploaded to GitHub releases, not committed
+*.zip
+*.blend1
+release/
