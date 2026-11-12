@@ -8,6 +8,7 @@
 2. writes into the output folder (`cockpit_export` beside the `.blend` by default):
    - `COCKPIT_<CAR>.BIN` - models and textures
    - `COCKPIT_<CAR>.ini` - the rig (do not edit it by hand: the next export rewrites it)
+   - `COCKPIT_<CAR>.glass` - the rain on each window (when the interior has glass)
    - `COCKPIT_<CAR>_KNOB.BIN` - only with a skinned gear lever
 3. with **Install in game** ticked, copies them into `<game>\scripts\Cockpit`.
 
@@ -54,6 +55,7 @@ What to check in the game:
 ```
 scripts\Cockpit\COCKPIT_<CAR>.BIN
 scripts\Cockpit\COCKPIT_<CAR>.ini
+scripts\Cockpit\COCKPIT_<CAR>.glass        (the rain on the windows)
 scripts\Cockpit\COCKPIT_<CAR>_KNOB.BIN     (with a skinned gear lever)
 README.txt                                  for the players: what it is, how to install and uninstall
 preview.png / .jpg                          when you picked one

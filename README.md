@@ -11,6 +11,7 @@ start the game straight into the street to test them, and zip them for release.
 | --- | --- |
 | `COCKPIT_<CAR>.BIN` | the interior's models and textures |
 | `COCKPIT_<CAR>.ini` | the rig: driver's eye, steering wheel, needles, mirrors, screens, accessory mounts |
+| `COCKPIT_<CAR>.glass` | where the rain falls on each window and the wipers sweep it (made from the glass) |
 | `COCKPIT_<CAR>_KNOB.BIN` | the gear lever, when it is skinned to two bones (optional) |
 
 ## Game compatibility
@@ -40,8 +41,8 @@ Everything is in one release: the add-on and the example car. Get it from the
 ## Requirements
 
 - Blender **4.2 or newer** (tested with 5.2).
-- To see your interior in the game: NFS Underground 2 with the **Cockpit mod** installed (`scripts\Cockpit.asi`
-  and an ASI loader). The quick test needs a Cockpit build that supports it; the add-on's **Status** panel tells.
+- To see your interior in the game: NFS Underground 2 with the **Cockpit mod 0.2.2** or newer installed
+  (`scripts\Cockpit.asi` and an ASI loader). The quick test needs a Cockpit build that supports it; the add-on's **Status** panel tells.
 
 ## Quick start
 

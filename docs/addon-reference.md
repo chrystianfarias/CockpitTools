@@ -13,7 +13,7 @@ Everything is in the 3D view's sidebar (**N**), **Cockpit** tab, in this order.
 | **NFSU2 folder** | the game's folder (with `SPEED2.EXE`). Kept in the add-on's preferences, for every file |
 | **Install in game** | after **Export to U2**, copy the files into `<game>\scripts\Cockpit` |
 | **Check** | lists what would stop the export or come out wrong in the game: errors (red) and warnings. The arrow button beside a line selects the object |
-| **Export to U2** | checks, converts the textures, writes `COCKPIT_<CAR>.BIN` / `.ini` (and `_KNOB.BIN`), and installs them when ticked |
+| **Export to U2** | checks, converts the textures, writes `COCKPIT_<CAR>.BIN` / `.ini` / `.glass` (and `_KNOB.BIN`), and installs them when ticked |
 | **Quick test in game** | exports and starts the game with this interior; see [Testing and publishing](testing-and-publishing.md). While the game runs the button says *Test running: close the game* |
 | **Open folder** | opens the output folder |
 | **Fix names** | appears when **Check** finds names the game cannot take: renames those static parts (upper case, ASCII, short enough) |

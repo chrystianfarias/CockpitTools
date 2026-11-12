@@ -83,7 +83,7 @@ so you may also type them yourself.
 | Head unit | mesh | `MULTIMIDIA` (also `SCREEN_WEB*`, `SCREEN_<X>`) | an HTML page |
 | Live text | text | `TEXT_<SOURCE>` | speed, RPM, gear, music |
 | Player decals | mesh | `DECAL_<REGION>` | shows the player's decals |
-| Wiper | mesh | `WIPER_<X>` | not animated in U2 yet |
+| Wiper | mesh | `WIPER_<X>` | sweeps the windscreen, clearing the rain |
 | Hands on the wheel | empty | `GRIP_L` / `GRIP_R` | - |
 | Accessory mount | empty | `DUMMY_<MOUNT>` | - |
 
@@ -231,12 +231,21 @@ sun strip on the windscreen). Its material must be one of the game's decal slots
 
 ## Wipers
 
-`WIPER_<X>`, origin at the pivot, local Z out of the glass. They are exported, but Underground 2 does not animate
-them yet: they stay at their pose.
+`WIPER_<X>`, origin at the pivot, at rest. The export turns each wiper's frame so its local Z is the windscreen's
+normal (the windscreen: the object `GLASS_FRONT`, or any `*GLASS_FRONT*`) and measures the rubber's reach (a material
+named `RUBBER` or `BLACK`, else the outer part of the blade). In the game the wipers sweep the glass (the player's K
+key) and clear the rain where they pass. Only in the exported files: your `.blend` is not changed.
+
+## Rain on the glass
+
+Nothing to do: every object with a *Glass* material gets, in the export, a rain layer over its glass, and
+`COCKPIT_<CAR>.glass` maps each window for the drops (up to 16 windows). Name the windscreen `GLASS_FRONT` so the
+wipers and the drops know which glass is the windscreen.
 
 ## Accessory mounts
 
-Players can fit accessories sold by the mod (gauges, steering wheels, head units, ornaments, seats) on your interior.
+Players can fit accessories sold by the mod (gauges, gauge pods, steering wheels, head units, a GPS, ornaments, seats,
+a NOS button) on your interior.
 You only place **mounts**: empties named **`DUMMY_<MOUNT>`**. The mount's **origin and axes are the accessory's**
 (X forward, Y left, Z up when the empty is not rotated).
 
@@ -247,10 +256,23 @@ You only place **mounts**: empties named **`DUMMY_<MOUNT>`**. The mount's **orig
 | `DUMMY_AUDIO`, `DUMMY_RADIO`, `DUMMY_STEREO`, `DUMMY_DVD` | head unit | - |
 | `DUMMY_HANG` | hanging ornament (keep the empty upright: it hangs along -Z) | - |
 | `DUMMY_SEAT` | seats (the pair) | `SEAT_FL`, `SEAT_FR` |
+| `DUMMY_GPS` | GPS (the mod's GPS unit; not fitted by default) | - |
+| `DUMMY_POD` | gauge pod (a dash or A-pillar pod with 1-3 holes) | - |
+| `DUMMY_NOS_BUTTON` | NOS button (make it a child of `STEERING_WHEEL`: it turns with the wheel) | - |
 
 Optional properties: `u2_mount_category` (overrides the name), `u2_accessory` (the accessory fitted by default, e.g.
 `LITTLE_TREE`), `u2_mount_hides` (the car's parts hidden while one is fitted, comma separated). In the game the player
-picks the accessories in the mod's panel (F5).
+buys and fits them in the customization shop's **INTERIOR** category (the camera moves into the car).
+
+Without a seat mount, the export adds `DUMMY_SEATS` at the car's origin (the seat accessories are made in car space).
+
+### Gauge pods
+
+A gauge pod is a mount like the others (`DUMMY_POD1`, `DUMMY_POD2`...: role *Mount: Gauge pod*): place it where the
+pod sits, its axes the pod's. Its holes are **`DUMMY_GAUGE<N>` empties parented to it**, one per hole, each where the
+gauge's face goes (Z toward the driver): the export fits each gauge to its hole. The holes show in the shop only
+while a pod is fitted on that mount; a `DUMMY_GAUGE` that is not a pod's child is a gauge slot of the car itself
+(always there).
 
 ## Materials
 
