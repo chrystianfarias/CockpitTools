@@ -35,7 +35,7 @@ In the **Cockpit** tab, **Car** panel, set **NFSU2 folder** to the game's folder
 
 ## 3. The Status panel
 
-Right below the Car panel, **Status** tells whether the game is ready for the add-on:
+Right below the Export panel, **Status** tells whether the game is ready for the add-on:
 
 | Line | Meaning |
 | --- | --- |
@@ -62,6 +62,10 @@ Example\textures\...        the interior's textures (the .blend points at them: 
 Open `EXAMPLE_RX7.blend`. It is the Mazda RX-7 interior the Cockpit mod ships, set up with CockpitTools: steering
 wheel, needles, the three mirrors, a skinned gear lever, the GPS screen and accessory mounts. Exporting it gives
 exactly the files of the mod's RX-7.
+
+Accessories have examples of their own, in the release's `Example-Accessories` folder (or the separate
+`cockpittools-example-accessories-<version>.zip`): one per category (head units, hanging ornament, gauge pod, gauge,
+steering wheel, seats, NOS button). See [Accessories](accessories.md).
 
 Prefer a smaller start? **Help > Build example cockpit** builds, in an empty file (**File > New > General**), a
 simple interior made from boxes, with every role and every material kind set up.

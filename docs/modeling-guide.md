@@ -309,7 +309,7 @@ whose image is the lit markings on black. The example does this.
 - Use any image Blender reads (PNG, JPG, TGA, EXR...), packed or on disk. No image: the material's colour becomes a
   small solid texture.
 - At export, each image becomes a DDS in a **`textures`** folder beside the `.blend` (converted again only when the
-  image changes): resized to a power of two, at most the **Max texture** size of the Car panel (1024 by default),
+  image changes): resized to a power of two, at most the **Max texture** size of the Export panel (1024 by default),
   with mipmaps.
 - Texture names in the game are the car's prefix plus the image's name, cut to 23 characters: give images short,
   distinct names (`dash.png`, `seat.png`...).

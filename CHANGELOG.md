@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.2.3 (beta)
+
+- **Accessories**: the export panel exports either a car interior or an **accessory** for every car (head unit 1-DIN /
+  2-DIN, hanging ornament, gauge, steering wheel, seats, GPS, gauge pod, NOS button): ID, name, category, price,
+  reputation and a hanging ornament's swing in the panel; `<ID>.BIN` / `<ID>.ini` installed into
+  `scripts\Cockpit\Accessories`, and a release zip for players. See [Accessories](docs/accessories.md).
+- Gauge pods: the role **Gauge pod hole** (empties `HOLE_1`, `HOLE_2`...) and the hole diameter in the panel.
+- Examples, one per category: the mod's **1-DIN** and **2-DIN head units**, **air freshener**, **3-gauge dash pod**,
+  **turbo gauge**, **steering wheel**, **seats** and **NOS button**, set up with the add-on; each exports exactly the
+  mod's own files.
+- The *Cockpit U2 - Car* panel is now *Cockpit U2 - Export* (the Export panel).
+
 ## 0.2.2 (beta)
 
 For the Cockpit mod 0.2.2 (NFS Underground 2): CockpitTools now follows the mod's version numbers.

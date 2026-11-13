@@ -2,10 +2,11 @@
 
 Everything is in the 3D view's sidebar (**N**), **Cockpit** tab, in this order.
 
-## Cockpit U2 - Car
+## Cockpit U2 - Export
 
 | Item | What it does |
 | --- | --- |
+| **Car interior / Accessory** | what the file exports: a car's whole interior (collection `interior`), or an accessory for every car (collection `accessory`; its fields below) |
 | **Car** | the game's car type name the interior is for (`350Z`, `PEUGOT`, `RX7`...). The field lists the 31 cars as you type; the car's full name shows below it |
 | **Prefix** | the prefix of every part and texture name in the pack. Empty = automatic (`<CAR>_INT_`, or `<CAR>_` for long car names). Change it only if two interiors of yours clash |
 | **Max texture** | the largest texture size in the pack: 256 / 512 / 1024 / 2048 |
@@ -19,6 +20,20 @@ Everything is in the 3D view's sidebar (**N**), **Cockpit** tab, in this order.
 | **Fix names** | appears when **Check** finds names the game cannot take: renames those static parts (upper case, ASCII, short enough) |
 
 The list under the buttons shows the last **Check** or export: errors, warnings, the files written and installed.
+
+With **Accessory** picked, the car's fields give way to the accessory's (see [Accessories](accessories.md)):
+
+| Item | What it does |
+| --- | --- |
+| **ID** | the accessory's files and the prefix of its parts and textures: `<ID>.BIN`, `<ID>.ini` |
+| **Name** | what the shop shows |
+| **Category** | the mounts it fits: head unit (1-DIN, 2-DIN), hanging ornament, gauge, steering wheel, seats, GPS, gauge pod, NOS button |
+| **Price**, **Reputation** | in the shop; the reputation adds to the car's visual rating in the career |
+| **Length**, **Damping**, **Twist stiffness** | a hanging ornament's swing |
+| **Hole diameter** | a gauge pod's holes (the gauges are scaled to it); the holes themselves are empties with the role **Gauge pod hole** (`HOLE_1`, `HOLE_2`...), and the panel counts them |
+
+**Export to U2** then writes `<ID>.BIN` / `<ID>.ini` and installs them into `<game>\scripts\Cockpit\Accessories`;
+**Quick test in game** is not offered (buy it in the shop's INTERIOR instead).
 
 ## Status
 

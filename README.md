@@ -14,6 +14,9 @@ start the game straight into the street to test them, and zip them for release.
 | `COCKPIT_<CAR>.glass` | where the rain falls on each window and the wipers sweep it (made from the glass) |
 | `COCKPIT_<CAR>_KNOB.BIN` | the gear lever, when it is skinned to two bones (optional) |
 
+It also exports **accessories** the players buy in the game's shop and fit on any car: head units, hanging
+ornaments, gauges, steering wheels, seats (`<ID>.BIN` / `<ID>.ini`, see [Accessories](docs/accessories.md)).
+
 ## Game compatibility
 
 | Game | Executable | CockpitTools |
@@ -37,6 +40,7 @@ Everything is in one release: the add-on and the example car. Get it from the
 | `CockpitTools-U2-<version>.zip` | **the add-on and the example**, with a README: start here |
 | `cockpittools-addon-<version>.zip` | the add-on alone (install it in Blender as it is: do not extract it) |
 | `cockpittools-example-rx7-<version>.zip` | the example alone: the mod's Mazda RX-7 interior, with its textures |
+| `cockpittools-example-accessories-<version>.zip` | the accessory examples alone: one per category (head units, hanging ornament, gauge pod, gauge, steering wheel, seats, NOS button) |
 
 ## Requirements
 
@@ -64,6 +68,7 @@ Then read the [Modeling guide](docs/modeling-guide.md) and make your own.
 - [Modeling guide](docs/modeling-guide.md) - car space, the driver's eye, every part's naming and settings,
   materials and textures, the game's limits
 - [Add-on reference](docs/addon-reference.md) - every panel and button
+- [Accessories](docs/accessories.md) - head units, hanging ornaments, gauges, steering wheels... for every car
 - [Testing and publishing](docs/testing-and-publishing.md) - export, quick test in the game, the release zip
 - [Troubleshooting](docs/troubleshooting.md)
 
@@ -93,8 +98,8 @@ If CockpitTools or the Cockpit mod is useful to you, a donation helps keep them 
 
 - **CockpitTools** and the **Cockpit** mod by FRS Mods (Chrystian Farias).
 - The example's **Mazda RX-7 interior** comes from *Juiced 2: Hot Import Nights* (Juice Games / THQ).
-- The accessories the example mounts by default come with the Cockpit mod, from *Midnight Club: Los Angeles*
-  (Rockstar San Diego); they are not part of this release.
+- The accessory examples are the Cockpit mod's own: its head units and gauge pod (original designs), its air freshener,
+  and its gauge, steering wheel, seats and NOS button, made from *Midnight Club: Los Angeles* (Rockstar San Diego).
 - The quick test boots the game with [FRSFastTest](https://github.com/chrystianfarias/FRSFastTest), downloaded from
   its own releases.
 - [Blender](https://www.blender.org) by the Blender Foundation.

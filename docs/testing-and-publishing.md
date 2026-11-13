@@ -2,7 +2,7 @@
 
 ## Export
 
-**Export to U2** (Car panel) runs **Check** first and stops on errors. Then it:
+**Export to U2** (Export panel) runs **Check** first and stops on errors. Then it:
 
 1. converts the materials' images to DDS in `textures\` beside the `.blend` (only the ones that changed);
 2. writes into the output folder (`cockpit_export` beside the `.blend` by default):
